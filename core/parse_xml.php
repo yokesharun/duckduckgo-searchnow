@@ -33,6 +33,7 @@
     $trim = str_replace('', '',$this->feed);
     $user = str_replace('&lang=en-us&format=rss_200','',$trim);
     return $rss_data;
+    // returning the whole data
   }
 }
 ?>
