@@ -1,0 +1,91 @@
+<!-- Search Now Widget Created By Arun Yokesh -->
+<html>
+<head>
+   <title> Search Now Widget -- For web</title>
+   <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+   <script type="text/javascript" src="js/jquery.js"></script>
+   <script type="text/javascript" src="js/materialize.min.js"></script>
+   <!-- visit: http://yokesharun.github.io/ -->
+
+   <style type="text/css">
+      .grid-example{
+         border: 1px solid #eee;
+    margin: 7px 0;
+    text-align: center;
+    line-height: 50px;
+    font-size: 28px;
+    color: #ee6e73;
+    padding: 0;
+      }
+
+      .loader{
+         text-align: center;
+         margin: 0 auto;
+         display: none;
+      }
+
+      .heading{
+         margin: 30px 0;
+      }
+
+
+   </style>
+</head>
+<body>
+      <div class="container">
+        <!-- Page Content goes here -->
+        <div class="row">
+      <div class="grid-example col s12 heading"><span class="flow-text"> Search Now Widget For Web</span></div>
+      <div class="row" id="search_form">
+        <div class="col s10 ">
+          <input id="email" type="search" placeholder="Search Your Text Here !!">
+        </div>
+        <div class="col s2">
+          <a class="btn-floating btn-large waves-effect waves-light red z-depth-3" id="click_search"><i class="mdi-action-search"></i></a>
+        </div>
+      </div>
+
+      <div class="col s12">
+      <ul class="collection">
+      <li class="collection-item z-dept-4">Alvin</li>
+      <li class="collection-item z-dept-4">Alvin</li>
+      <li class="collection-item z-dept-4">Alvin</li>
+      <li class="collection-item z-dept-4">Alvin</li>
+    </ul>
+ </div>
+ 
+
+      <!-- loader div -->
+      <div class="col s12 loader" id="loading">
+      <div class="preloader-wrapper big active">
+              <div class="spinner-layer spinner-red-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- end loader -->
+
+
+           </div>
+      </div>
+
+
+  </div>
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready(function(){
+      $('#click_search').click(function(){
+         $('#search_form').fadeOut(100);
+         $('#loading').fadeIn(1000);
+      });
+});
+</script>
