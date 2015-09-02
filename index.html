@@ -5,6 +5,7 @@
    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
    <script type="text/javascript" src="js/jquery.js"></script>
    <script type="text/javascript" src="js/materialize.min.js"></script>
+   <script type="text/javascript" src="js/script.js"></script>
    <!-- visit: http://yokesharun.github.io/ -->
 
    <style type="text/css">
@@ -81,22 +82,3 @@
   </div>
 </body>
 </html>
-
-<script type="text/javascript">
-$(document).ready(function(){
-      $('#click_search').click(function(){
-         $('#search_form').fadeOut(100);
-         $('#loading').fadeIn(1000);
-     $.post("core/response.php",
-    {
-        q: "a",
-    },
-    function(data, status){
-      $('#loading').fadeOut(1000);
-        $("#append_item").append(data);
-        $('#search_list').fadeIn(5000);
-    });
-
-      });
-});
-</script>
