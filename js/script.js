@@ -1,10 +1,12 @@
 $(document).ready(function(){
       $('#click_search').click(function(){
+  var q = $('#q').val();
          $('#search_form').fadeOut(100);
          $('#loading').fadeIn(1000);
-     $.post("core/response.php",
+         console.log(q);
+     $.get("core/response.php",
     {
-        q: "a",
+        q: q,
     },
     function(data, status){
       $('#loading').fadeOut(1000);

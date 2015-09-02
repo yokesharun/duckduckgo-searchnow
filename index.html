@@ -19,6 +19,17 @@
     padding: 0;
       }
 
+      .circle{
+        width: 50px;
+        border-radius: 100%;
+        height: 50px;
+      }
+
+      .logo{
+        height: 70px;
+        width: 70px;
+      }
+
       .loader{
          text-align: center;
          margin: 0 auto;
@@ -26,7 +37,8 @@
       }
 
       .heading{
-         margin: 30px 0;
+         margin: 40px 0;
+         padding: 10px;
       }
 
       .search-list{
@@ -40,10 +52,11 @@
       <div class="container">
         <!-- Page Content goes here -->
         <div class="row">
-      <div class="grid-example col s12 heading"><span class="flow-text"> Search Now Widget For Web</span></div>
+      <div class="col s9 heading"><span class="flow-text"> Search Now Widget For Web</span></div>
+      <div class="col s3"><span>Powered By </span><img src="https://duckduckgo.com/i/9129e7ed.png" class="logo"></div>
       <div class="row" id="search_form">
         <div class="col s10 ">
-          <input id="email" type="search" placeholder="Search Your Text Here !!">
+          <input id="q" type="search" placeholder="Search Your Text Here !!">
         </div>
         <div class="col s2">
           <a class="btn-floating btn-large waves-effect waves-light red z-depth-3" id="click_search"><i class="mdi-action-search"></i></a>
@@ -52,7 +65,6 @@
 
       <div class="col s12 search-list" id="search_list">
       <ul class="collection" id="append_item">
-      <li class="collection-item z-dept-4">Alvin</li>
     </ul>
  </div>
  

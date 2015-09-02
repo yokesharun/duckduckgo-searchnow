@@ -1,7 +1,10 @@
 	<?php 
+if($_GET){
 
-include('feed-reader.php');
+include('parse_xml.php');
 
-$get_feed = new rss('https://api.duckduckgo.com/?q=google&format=xml');
-echo $get_feed->get_display(10,"The Hindu Feed Collector"); // feed count , heading  
+$get_feed = new rss('https://api.duckduckgo.com/?q='.$_GET["q"].'&format=xml');
+echo $get_feed->get_display(10); // feed count , heading  
+}
+
  ?>
