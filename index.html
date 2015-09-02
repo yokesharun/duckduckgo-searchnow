@@ -28,6 +28,10 @@
          margin: 30px 0;
       }
 
+      .search-list{
+         display: none;
+      }
+
 
    </style>
 </head>
@@ -45,11 +49,8 @@
         </div>
       </div>
 
-      <div class="col s12">
-      <ul class="collection">
-      <li class="collection-item z-dept-4">Alvin</li>
-      <li class="collection-item z-dept-4">Alvin</li>
-      <li class="collection-item z-dept-4">Alvin</li>
+      <div class="col s12 search-list" id="search_list">
+      <ul class="collection" id="append_item">
       <li class="collection-item z-dept-4">Alvin</li>
     </ul>
  </div>
@@ -86,6 +87,16 @@ $(document).ready(function(){
       $('#click_search').click(function(){
          $('#search_form').fadeOut(100);
          $('#loading').fadeIn(1000);
+     $.post("core/response.php",
+    {
+        q: "a",
+    },
+    function(data, status){
+      $('#loading').fadeOut(1000);
+        $("#append_item").append(data);
+        $('#search_list').fadeIn(5000);
+    });
+
       });
 });
 </script>
